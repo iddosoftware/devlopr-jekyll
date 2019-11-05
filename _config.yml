@@ -1,32 +1,32 @@
-title: John Doe
-subtitle: Web Developer and Designer
+title: Iddo Software
+subtitle: A Machine Learning Company
 description: >- # this means to ignore newlines until "baseurl:"
-  devlopr-jekyll is a Jekyll Theme Built For Developers
+  NaNaNaNaNa BTAMAN.
 
 url: "https://devlopr.netlify.com" # the base hostname & protocol for your site, e.g. https://example.github.io
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/devlopr-jekyll" # the subpath of your site, e.g. /blog
 
 urls:
-    - text: Blog
+    - text: Portofolio
       url: /blog
-    - text: Shop
-      url : /shop/
-    - text: About Me
+#    - text: Shop
+#      url : /shop/
+    - text: About Us
       url: /about/
-    - text: Contact Me
+    - text: Contact Us
       url : /contact/
-    - text: Styleguide
-      url: /styleguide/
+#    - text: Styleguide
+#      url: /styleguide/
     
 
 # Edit these details 
 
-author_logo: profile.png
-author: John Doe
-author_bio: Hi, My Name is John Doe. I love to Code and Design. devlopr-jekyll is a theme built for developers.  
-author_email: "johndoe@gmail.com"
-author_location: India
-author_website_url: "http://johndoe.com"
+author_logo: icon_big.png
+author: IDDO
+author_bio: We are a small company focused on computer vision and machine learning projects.
+author_email: "info@iddo.ro"
+author_location: Brasov, Romania
+author_website_url:
 
 author_work_experiences: 
             - company_name: Google
@@ -62,26 +62,56 @@ author_project_details:
                 project_url: https://programmingebooks.com
                 visibility: true
 
+what_we_do_details:
+              - service_thumbnail: AI_consultancy.jpg
+                service_title: Consultancy
+                service_description: We help define your problem in the AI field. Analyze SOTA standards and estimate the costs (in required resources/ time/ additional expertise).
+                visibility: true
+              - service_thumbnail: AI_dev.png
+                service_title: Development
+                service_description: Full stack ML. From analyzing existing algorithms to deployment on your favorite platform. We have out own trining hardware, so we can be fully contained if needed.
+                visibility: true
+              - service_thumbnail: AI_reseach.jpg
+                service_title: Research
+                service_description: Redefine the unknown.
+                visibility: true
+
+how_we_do_details:
+              - step_title: Initial commit
+                step_description: Understanding the business goals / processes.
+                visibility: true
+              - step_title: AI aproach
+                step_description: Identifying stages in the pipeline which might benefit from using a CV/ML approach.
+                visibility: true
+              - step_title: SOTA
+                step_description: Researching the state of the art in the relevant field.
+                visibility: true
+              - step_title: What about the costs?
+                step_description: Estimate the relative cost, time to market and expected performance of alternatives we find (or think of).
+                visibility: true
+              - step_title: Time to work
+                step_description: Solution design, implementation, testing, deployment and maintenance.
+                visibility: true
 # social links
-twitter_username: johndoe
-github_username:  johndoe
-facebook_username: johndoe
-linkedin_username: johndoe
-behance_username: johndoe
-instagram_username: johndoe
-medium_username: johndoe
-telegram_username: johndoe
-dribbble_username: johndoe
-flickr_username: johndoe
+twitter_username:
+github_username:  iddosoftware
+facebook_username:
+linkedin_username: iddo-software
+behance_username:
+instagram_username:
+medium_username:
+telegram_username:
+dribbble_username:
+flickr_username:
 
 #for comments using disqus
-disqus_shortname: sujay-kundu  
+disqus_shortname: iddo
 
 # wakatime username (coding activity)
-wakatime_username: sujaykundu777
+wakatime_username:
 
 # formspree (contact form)
-formspree_email: johndoe@gmail.com
+formspree_email: info@iddo.ro
 
 # syntax highlighter
 markdown: kramdown
@@ -92,9 +122,11 @@ permalink: pretty
 google_analytics: UA-46783401-10 
 
 # Choose what to show ( can be true or false)
-show_author_work_experiences: true
-show_author_education_details: true
-show_author_project_details: true
+show_author_work_experiences: false
+show_author_education_details: false
+show_author_project_details: false
+show_what_we_do: true
+show_how_we_do: true
 
 # dont touch this unless required
 plugins:
@@ -107,12 +139,12 @@ plugins:
 # - jekyll-archives
 
 # algolia search 
-algolia:
-  application_id: D9WA1YKTRQ
-  index_name: blog_posts # You can replace that with whatever name you want
-  files_to_exclude: []
-  nodes_to_index: 'article'
-  search_only_api_key: 58ffdd7cd6c45ec1577a7fcd789b1b9a
+#algolia:
+#  application_id: D9WA1YKTRQ
+#  index_name: blog_posts # You can replace that with whatever name you want
+#  files_to_exclude: []
+#  nodes_to_index: 'article'
+#  search_only_api_key: 58ffdd7cd6c45ec1577a7fcd789b1b9a
 
 # pagination of posts
 paginate: 8

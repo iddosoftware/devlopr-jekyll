@@ -9,6 +9,8 @@ layout: default
             <div class="card">
                 <h1 class="card-title">About</h1>
                 <p> {{ site.author_bio }}</p>
+                <p></p>
+                <p> One small step for a company, one giant leap for Skynet. </p>
             </div>
             {% endif %}
 
@@ -33,6 +35,52 @@ layout: default
                     {% endif %}
                     
                     {% endfor %}  
+            </div>
+            {% endif %}
+
+            {% if site.show_what_we_do == true %}
+            <div class="card">
+                <h1 class="card-title">What we do</h1>
+                <br />
+                {% for service in site.what_we_do_details %}
+                {% if service.visibility == true %}
+                <div class="row">
+                        <!--<div class="col-md-2">-->
+                            <!--<img src="/assets/img/{{service.service_thumbnail}}" class="company-logo" />-->
+                        <!--</div>-->
+                        <div class="col-md-6">
+                            <h4 class="experience-title"> {{ service.service_title}}</h4>
+                            <h6 class="experience-info"> {{ service.project_info}}</h6>
+                            <p class="experience-desc"> {{ service.service_description }} </p>
+                            <!--<p><a href="{{exp.company_url}}">{{ project.project_url}}</a></p>-->
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if site.show_how_we_do == true %}
+            <div class="card">
+                <h1 class="card-title">How we do it</h1>
+                <br />
+                {% for step in site.how_we_do_details %}
+                {% if step.visibility == true %}
+                <div class="row">
+                        <!--<div class="col-md-2">-->
+                            <!--<img src="/assets/img/{{step.step_thumbnail}}" class="company-logo" />-->
+                        <!--</div>-->
+                        <div class="col-md-6">
+                            <h4 class="experience-title"> {{ step.step_title}}</h4>
+                            <h6 class="experience-info"> {{ step.step_info}}</h6>
+                            <p class="experience-desc"> {{ step.step_description }} </p>
+                            <!--<p><a href="{{exp.company_url}}">{{ project.project_url}}</a></p>-->
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% endfor %}
             </div>
             {% endif %}
 
@@ -114,6 +162,13 @@ layout: default
 
                 {%- include author_skills.html -%}
                
+            </div>
+
+            <div class="card">
+                <h1> Billing environment </h1>
+
+                {%- include billing.html -%}
+
             </div>
     
             {% if site.wakatime_username %}
