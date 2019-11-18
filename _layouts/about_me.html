@@ -8,9 +8,10 @@ layout: default
             {% if site.author_bio %}
             <div class="card">
                 <h1 class="card-title">About</h1>
-                <p> {{ site.author_bio }}</p>
-                <p></p>
-                <p> One small step for a company, one giant leap for Skynet. </p>
+                <!--<p> {{ site.author_bio }}</p>-->
+                <!--<p></p>-->
+                <!--<p> One small step for a company, one giant leap for Skynet. </p>-->
+                {%- include about_us.html -%}
             </div>
             {% endif %}
 
@@ -38,49 +39,141 @@ layout: default
             </div>
             {% endif %}
 
+            <!--{% if site.show_what_we_do == true %}-->
+            <!--<div class="card">-->
+                <!--<h1 class="card-title">What we do</h1>-->
+                <!--<br />-->
+                <!--&lt;!&ndash;{% for service in site.what_we_do_details %}&ndash;&gt;-->
+                <!--&lt;!&ndash;{% if service.visibility == true %}&ndash;&gt;-->
+                <!--<div class="row">-->
+                        <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="/assets/img/{{service.service_thumbnail}}" class="company-logo" />&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--<div class="col-md-6">-->
+                            <!--&lt;!&ndash;<h4 class="experience-title"> {{ service.service_title}}</h4>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<h6 class="experience-info"> {{ service.project_info}}</h6>&ndash;&gt;-->
+                            <!--<p class="experience-desc"> {%- include what_we_do.html -%} </p>-->
+                            <!--&lt;!&ndash;&lt;!&ndash;<p><a href="{{exp.company_url}}">{{ project.project_url}}</a></p>&ndash;&gt;&ndash;&gt;-->
+
+                        <!--</div>-->
+
+                    <!--</div>-->
+                    <!--&lt;!&ndash;{% endif %}&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;{% endfor %}&ndash;&gt;-->
+            <!--</div>-->
+            <!--{% endif %}-->
             {% if site.show_what_we_do == true %}
             <div class="card">
                 <h1 class="card-title">What we do</h1>
-                <br />
-                {% for service in site.what_we_do_details %}
-                {% if service.visibility == true %}
+                <!--<br />-->
+                <!--{%- include what_we_do.html -%}-->
                 <div class="row">
-                        <!--<div class="col-md-2">-->
-                            <!--<img src="/assets/img/{{service.service_thumbnail}}" class="company-logo" />-->
-                        <!--</div>-->
-                        <div class="col-md-6">
-                            <h4 class="experience-title"> {{ service.service_title}}</h4>
-                            <h6 class="experience-info"> {{ service.project_info}}</h6>
-                            <p class="experience-desc"> {{ service.service_description }} </p>
-                            <!--<p><a href="{{exp.company_url}}">{{ project.project_url}}</a></p>-->
-                        </div>
+                    <div class="col-md-6">
+                        <p class="experience-desc"> {%- include what_we_do.html -%} </p>
                     </div>
-                    {% endif %}
-
-                    {% endfor %}
+                </div>
             </div>
             {% endif %}
 
-            {% if site.show_how_we_do == true %}
-            <div class="card">
-                <h1 class="card-title">How we do it</h1>
-                <br />
-                {% for step in site.how_we_do_details %}
-                {% if step.visibility == true %}
-                <div class="row">
-                        <!--<div class="col-md-2">-->
-                            <!--<img src="/assets/img/{{step.step_thumbnail}}" class="company-logo" />-->
+            <!--{% if site.show_how_we_do == true %}-->
+            <!--<div class="card">-->
+                <!--<h1 class="card-title">How we do it</h1>-->
+                <!--<br />-->
+                <!--{% for step in site.how_we_do_details %}-->
+                <!--{% if step.visibility == true %}-->
+                <!--<div class="row">-->
+                        <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="/assets/img/{{step.step_thumbnail}}" class="company-logo" />&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--<div class="col-md-6">-->
+                            <!--<h4 class="experience-title"> {{ step.step_title}}</h4>-->
+                            <!--<h6 class="experience-info"> {{ step.step_info}}</h6>-->
+                            <!--<p class="experience-desc"> {{ step.step_description }} </p>-->
+                            <!--&lt;!&ndash;<p><a href="{{exp.company_url}}">{{ project.project_url}}</a></p>&ndash;&gt;-->
                         <!--</div>-->
-                        <div class="col-md-6">
-                            <h4 class="experience-title"> {{ step.step_title}}</h4>
-                            <h6 class="experience-info"> {{ step.step_info}}</h6>
-                            <p class="experience-desc"> {{ step.step_description }} </p>
-                            <!--<p><a href="{{exp.company_url}}">{{ project.project_url}}</a></p>-->
-                        </div>
-                    </div>
-                    {% endif %}
+                    <!--</div>-->
+                    <!--{% endif %}-->
 
-                    {% endfor %}
+                    <!--{% endfor %}-->
+            <!--</div>-->
+            <!--{% endif %}-->
+
+            {% if site.show_what_we_want == true %}
+            <div class="card">
+                <h1 class="card-title">What we want</h1>
+                <!--<br />-->
+                <!--{%- include what_we_do.html -%}-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="experience-desc"> {%- include what_we_want.html -%} </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if site.show_what_we_have_done == true %}
+            <div class="card">
+                <h1 class="card-title">What we've done</h1>
+                <!--<br />-->
+                <!--{%- include what_we_do.html -%}-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="experience-desc"> {%- include what_we_have_done.html -%} </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if site.show_what_we_can_do == true %}
+            <div class="card">
+                <h1 class="card-title">What we can do</h1>
+                <!--<br />-->
+                <!--{%- include what_we_do.html -%}-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="experience-desc"> {%- include what_we_can_do.html -%} </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if site.show_how_we_do_what_we_do == true %}
+            <div class="card">
+                <h1 class="card-title">How we do what we do</h1>
+                <!--<br />-->
+                <!--{%- include what_we_do.html -%}-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="experience-desc"> {%- include how_we_do_what_we_do.html -%} </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if site.show_what_we_use == true %}
+            <div class="card">
+                <h1 class="card-title">What we use</h1>
+                <!--<br />-->
+                <!--{%- include what_we_do.html -%}-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="experience-desc"> {%- include what_we_use.html -%} </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if site.show_what_we_have == true %}
+            <div class="card">
+                <h1 class="card-title">What we have</h1>
+                <!--<br />-->
+                <!--{%- include what_we_do.html -%}-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="experience-desc"> {%- include what_we_have.html -%} </p>
+                    </div>
+                </div>
             </div>
             {% endif %}
 
